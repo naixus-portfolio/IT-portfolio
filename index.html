@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -117,7 +117,7 @@
                 name: "GIAN TACMO",
                 title: "BSIT-1A Student | Developer",
                 contact: "📍 Manaoag, Pangasinan | 📞 09296365322 | ✉️ giantacmo28@gmail.com",
-                objective: "Passionate IT student focused on networking, coding, wireless problem, and problem-solving systems.",
+                objective: "I may have only a short background in Information Technology, but I am dedicated, hardworking, and resilient. I do not easily give up and I continue to grow even when challenges feel difficult. I am eager to expand my skills and knowledge by pursuing further studies at the University of Eastern Pangasinan, where I can transform my determination into expertise.",
                 skills: "<li>Hardware Troubleshooting</li><li>Basic Networking</li><li>HTML / CSS</li><li>Computer Maintenance</li>",
                 education: "<strong>BS Information Technology</strong><br>University of Eastern Pangasinan (2026 - Present)",
                 references: "Asuncion E. Tacmo (09632540357)"
@@ -191,8 +191,8 @@
             const data = teamResumes[key];
             windowTitle.innerText = `C:\\Users\\BSIT-1A\\Projects\\${data.name.replace(/ /g, '_')}.html`;
             windowBody.innerHTML = `
-                <button class="back-btn" id="backBtn">← Back to Member List</button>
-                <div class="resume-container"style="background:linear-gradient(rgba(255,255,255,${data.overlay}),rgba(255,255,255,${data.overlay})),
+                 <button class="back-btn" id="backBtn">← Back to Member List</button>
+                <div class="resume-container fullscreen-mode" style="background:linear-gradient(rgba(255,255,255,${data.overlay}),rgba(255,255,255,${data.overlay})),
                     url('${data.bg}');background-size:cover;background-position:center;">
                      <div class="resume-header">
                      <img src="${data.pic}" class="profile-pic" alt="Profile Picture">
@@ -221,142 +221,119 @@
 
             document.getElementById('backBtn').addEventListener('click', renderMenu);
         }
+
         folderProjects.addEventListener('click', function() {
-        folderProjects.classList.add('active');
-        folderTech.classList.remove('active');
-        folderConnect.classList.remove('active');
-        explorerWindow.classList.add('active');
-        renderMenu();
+            folderProjects.classList.add('active');
+            folderTech.classList.remove('active');
+            folderConnect.classList.remove('active');
+            explorerWindow.classList.add('active', 'full-screen-window');
+            renderMenu();
         });
 
         folderTech.addEventListener('click', function() {
-        folderTech.classList.add('active');
-        folderProjects.classList.remove('active');
-        folderConnect.classList.remove('active');
-        explorerWindow.classList.add('active');
+            folderTech.classList.add('active');
+            folderProjects.classList.remove('active');
+            folderConnect.classList.remove('active');
+            explorerWindow.classList.add('active', 'full-screen-window');
 
-    windowTitle.innerText = 'C:\\Users\\BSIT-1A\\Projects\\Projects.html';
+            windowTitle.innerText = 'C:\\Users\\BSIT-1A\\Projects\\Projects.html';
 
-    windowBody.innerHTML = `
-        <div class="resume-container" style="background:linear-gradient(rgba(255,255,255,.50),rgba(255,255,255,.50)),
-        url('bg.project.jpg');background-size: cover;background-position: center;background-repeat: no-repeat;">
-            <h2>PROJECTS</h2>
-            <hr>
+            windowBody.innerHTML = `
+                <div class="resume-container fullscreen-mode" style="background:linear-gradient(rgba(255,255,255,.50),rgba(255,255,255,.50)),
+                url('bg.project.jpg');background-size: cover;background-position: center;background-repeat: no-repeat;">
+                    <h2>PROJECTS</h2>
+                    <hr>
 
-            <div class="resume-section">
-                <h3>Languages & Tools</h3>
-                <p style="font-size:20px;
-                 font-weight:bold;color:#000;">
-                HTML5 • CSS3 • Python</p>
-            </div>
+                    <div class="resume-section">
+                        <h3>Languages & Tools</h3>
+                        <p style="font-size:20px; font-weight:bold; color:#000;">HTML5 • CSS3 • Python</p>
+                    </div>
 
-            <div class="resume-section">
-                <div class="resume-section">
-    <h3>GROUP ACTIVITIES</h3>
-    <div class="project-gallery">
+                    <div class="resume-section">
+                        <h3>GROUP ACTIVITIES</h3>
+                        <div class="project-gallery">
+                            <div class="file-item" onclick="showProject('john')">📁 John's Activities</div>
+                            <div class="file-item" onclick="showProject('gian')">📁 Gian's Activities</div>
+                            <div class="file-item" onclick="showProject('michoe')">📁 Mhicoe's Activities</div>
+                            <div class="file-item" onclick="showProject('keziah')">📁 Keziah's Activities</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
 
-         <div class="file-item" onclick="showProject('john')">
-         📁 John's Activities</div>
+        folderConnect.addEventListener('click', function() {
+            folderConnect.classList.add('active'); 
+            folderProjects.classList.remove('active');
+            folderTech.classList.remove('active');    
+            explorerWindow.classList.add('active', 'full-screen-window');
 
-         <div class="file-item" onclick="showProject('gian')">
-         📁 Gian's Activities</div>
+            windowTitle.innerText = 'C:\\Users\\BSIT-1A\\Projects\\Contact.html';
+            windowBody.innerHTML = `
+            <div class="resume-container fullscreen-mode" style="background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),
+             url('cont.webp');background-size: cover;background-position: center;background-repeat: no-repeat;">
+                <h2>CONTACT INFORMATION</h2>
+                <hr>
 
-         <div class="file-item" onclick="showProject('michoe')">
-        📁 Mhicoe's Activities</div>
+                <div class="contact-grid">
+                    <div class="contact-column">
+                        <div class="resume-section">
+                            <h3>JOHN ELISEO P. NIMUAN</h3>
+                            <p>
+                             <a href="https://www.facebook.com/share/1F6qgmWqtA/" target="_blank"><i class="fab fa-facebook" style="color: #1877F2;"></i> Facebook </a>
+                             <a href="https://www.instagram.com/arjay_palad?srtk=M21sOXkwemNzbTc2" target="_blank">| <i class="fab fa-instagram" style="color: #E4405F;"></i> Instagram</a>
+                            </p>
+                        </div>
 
-         <div class="file-item" onclick="showProject('keziah')">
-         📁 Keziah's Activities</div>
-    </div>
-</div>
-    `;
-});
+                        <div class="resume-section">
+                            <h3>GIAN TACMO</h3>
+                            <p>
+                            <a href="https://www.facebook.com/share/1JaMBN2p5P/" target="_blank"><i class="fab fa-facebook" style="color: #1877F2;"></i> Facebook </a>
+                            <a href="https://www.instagram.com/rekagiii_?dlrf=N3lvOHh1aTd1ajA0" target="_blank">| <i class="fab fa-instagram" style="color: #E4405F;"></i> Instagram</a>
+                            </p>
+                        </div>
+                    </div>
 
-    folderConnect.addEventListener('click', function() {
-    folderConnect.classList.add('active'); 
-    folderProjects.classList.remove('active');
-    folderTech.classList.remove('active');   
-    explorerWindow.classList.add('active');
+                    <div class="contact-column">
+                        <div class="resume-section">
+                            <h3>MICHOE TALINO</h3>
+                            <p>
+                            <a href="https://www.facebook.com/share/1Jh9fE1SzP/" target="_blank"><i class="fab fa-facebook" style="color: #1877F2;"></i> Facebook </a>
+                            <a href="https://www.instagram.com/_mhicodezx?dlrf=MXJscml5MG4yZXNwZw==" target="_blank">| <i class="fab fa-instagram" style="color: #E4405F;"></i> Instagram</a>
+                            </p>
+                        </div>
 
-    windowTitle.innerText = 'C:\\Users\\BSIT-1A\\Projects\\Contact.html';
-    windowBody.innerHTML =
-    `<div class="resume-container" style="background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),
-     url('cont.webp');background-size: cover;background-position: center;background-repeat: no-repeat;">
-    <h2>CONTACT INFORMATION</h2>
-    <hr>
+                        <div class="resume-section">
+                            <h3>KEZIAH YVETTE</h3>
+                             <p>
+                            <a href="https://www.facebook.com/share/1DoomwQbwK/" target="_blank"><i class="fab fa-facebook" style="color: #1877F2;"></i> Facebook </a>
+                            <a href="https://www.instagram.com/yvettekssjsjkksjw?fbclid=IwY2xjawVNF_1leHRuA2FlbQIxMABwZG9mBWJyaWQRMXlVcGtOdHZ2RFZPN1RKTDhzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEenihGOhWVt3lPF9wHgzArcuPomW0z" target="_blank"> | <i class="fab fa-instagram" style="color: #E4405F;"></i> Instagram </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        });
 
-    <div class="contact-grid">
+        function showProject(member){
+            const projects = {
+                john: "act.n.jpg",
+                gian: "act.g.png",
+                michoe: "act.m.jpg",
+                keziah: "act.k.jpg"
+            };
 
-        <div class="contact-column">
-
-            <div class="resume-section">
-                <h3>JOHN ELISEO P. NIMUAN</h3>
-                <p>
-                 <a href="https://www.facebook.com/share/1F6qgmWqtA/" target="_blank"><i class="fab fa-facebook" style="color: #1877F2;"></i> Facebook </a>
-                 | <a href="https://www.instagram.com/blue.panda03?xtok=M21sOXkwemNzbTc2" target="_blank">| <i class="fab fa-instagram" style="color: #E4405F;"></i> Instagram</a>
-                </p>
-            </div>
-
-            <div class="resume-section">
-                <h3>GIAN TACMO</h3>
-                <p>
-                <a href="https://www.facebook.com/share/1JaMBN2p5P/" target="_blank"><i class="fab fa-facebook" style="color: #1877F2;"></i> Facebook </a>
-                <a href="https://www.instagram.com/rekagiii_?dlrf=N3lvOHh1aTd1ajA0" target="_blank">| <i class="fab fa-instagram" style="color: #E4405F;"></i> Instagram</a>
-                </p>
-            </div>
-
-        </div>
-
-        <div class="contact-column">
-
-            <div class="resume-section">
-                <h3>MICHOE TALINO</h3>
-                <p>
-                <a href="https://www.facebook.com/share/1Jh9fE1SzP/" target="_blank"><i class="fab fa-facebook" style="color: #1877F2;"></i> Facebook </a>
-                <a href="https://www.instagram.com/_mhicodezx?dlrf=MXJscml5MG4yZXNwZw==" target="_blank">| <i class="fab fa-instagram" style="color: #E4405F;"></i> Instagram</a>
-                </p>
-            </div>
-
-            <div class="resume-section">
-                <h3>KEZIAH YVETTE</h3>
-                 <p>
-                <a href="https://www.facebook.com/share/1DoomwQbwK/" target="_blank"><i class="fab fa-facebook" style="color: #1877F2;"></i> Facebook </a>
-                <a href="https://www.instagram.com/yvettekssjsjkksjw?fbclid=IwY2xjawVNF_1leHRuA2FlbQIxMABwZG9mBWJyaWQRMXlVcGtOdHZ2RFZPN1RKTDhzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEenihGOhWVt3lPF9wHgzArcuPomW0z" target="_blank"> | <i class="fab fa-instagram" style="color: #E4405F;"></i> Instagram </a>
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</div>
- `;
-});
-   function showProject(member){
-
-    const projects = {
-        john: "act.n.jpg",
-        gian: "act.g.png",
-        michoe: "act.m.jpg",
-        keziah: "act.k.jpg"
-    };
-
-    windowBody.innerHTML = `
-        <button class="back-btn"
-        onclick="folderTech.click()">
-        ← Back
-        </button>
-
-        <img src="${projects[member]}"
-        style="
-        width:100%;
-        border-radius:10px;
-        ">
-    `;
-}     
+            windowBody.innerHTML = `
+                <button class="back-btn" onclick="folderTech.click()">← Back</button>
+                <img src="${projects[member]}" style="width:100%; height: auto; border-radius:10px; margin-top: 15px;">
+            `;
+        }     
+        
         closeBtn.addEventListener('click', function() {
             folderProjects.classList.remove('active');
             folderTech.classList.remove('active');
             folderConnect.classList.remove('active');
-            explorerWindow.classList.remove('active');
+            explorerWindow.classList.remove('active', 'full-screen-window');
         });
     </script>
 </body>
