@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body, html {
     width: 100%;
     height: 100%;
@@ -13,7 +12,6 @@ body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
 }
-
 
 /* --- Interactive Mouse Spotlight --- */
 .spotlight {
@@ -30,7 +28,6 @@ body, html {
     );
     z-index: 3;
 }
-
 
 /* --- Cyber Grid Background --- */
 .cyber-grid {
@@ -50,12 +47,10 @@ body, html {
     opacity: 0.6;
 }
 
-
 @keyframes gridMove {
     0% { background-position: 0 0; }
     100% { background-position: 0 40px; }
 }
-
 
 /* --- Floating Tech Particles --- */
 .tech-particles {
@@ -85,7 +80,6 @@ body, html {
     100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
 }
 
-
 /* --- Ambient Glow Orbs --- */
 .glow-orb {
     position: fixed;
@@ -98,7 +92,6 @@ body, html {
     animation: orbFloat 12s ease-in-out infinite alternate;
 }
 
-
 .glow-orb.orb2 {
     width: 500px;
     height: 500px;
@@ -108,12 +101,10 @@ body, html {
     animation-duration: 15s;
 }
 
-
 @keyframes orbFloat {
     0% { transform: translate(0, 0); }
     100% { transform: translate(50px, -50px); }
 }
-
 
 /* --- Portfolio Layout --- */
 .content-overlay {
@@ -128,7 +119,6 @@ body, html {
     padding: 40px 20px;
 }
 
-
 h1 {
     font-size: 2.3rem;
     font-weight: 800;
@@ -140,7 +130,6 @@ h1 {
     text-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
 }
 
-
 p.subtitle {
     font-size: 0.95rem;
     color: #94a3b8;
@@ -148,8 +137,7 @@ p.subtitle {
     max-width: 600px;
 }
 
-
-/* --- Interactive Folders Dock --- */
+/* --- Interactive Folders Dock (Naibalik sa dating hitsura) --- */
 .portfolio-dock {
     display: flex;
     gap: 20px;
@@ -157,7 +145,7 @@ p.subtitle {
     justify-content: center;
     margin-bottom: 25px;
 }
-Gian
+
 .folder {
     width: 160px;
     height: 115px;
@@ -170,7 +158,6 @@ Gian
     border: 1px solid rgba(0, 243, 255, 0.2);
     text-align: left;
 }
-
 
 .folder::before {
     content: '';
@@ -187,13 +174,11 @@ Gian
     transition: 0.3s;
 }
 
-
 .folder:hover {
     transform: translateY(-6px);
     border-color: #00f3ff;
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
 }
-
 
 .folder.active {
     background: #00f3ff;
@@ -201,18 +186,15 @@ Gian
     box-shadow: 0 0 20px rgba(0, 243, 255, 0.6);
 }
 
-
 .folder.active::before {
     background: #00f3ff;
     border-color: #00f3ff;
 }
 
-
 .folder.active .folder-title,
 .folder.active .folder-info {
     color: #0b0f19;
 }
-
 
 .folder-content {
     padding: 15px;
@@ -222,7 +204,6 @@ Gian
     height: 100%;
 }
 
-
 .folder-title {
     color: #ffffff;
     font-weight: bold;
@@ -231,14 +212,12 @@ Gian
     transition: color 0.3s ease;
 }
 
-
 .folder-info {
     color: #94a3b8;
     font-size: 0.7rem;
     margin-top: 3px;
     transition: color 0.3s ease;
 }
-
 
 /* --- OS Window Pop-up Explorer --- */
 .explorer-window {
@@ -255,11 +234,9 @@ Gian
     margin-top: 10px;
 }
 
-
 .explorer-window.active {
     display: block;
 }
-
 
 .window-header {
     background: #1e293b;
@@ -269,7 +246,7 @@ Gian
     justify-content: space-between;
     border-bottom: 1px solid rgba(0, 243, 255, 0.2);
 }
-Gian
+
 .window-title {
     font-family: monospace;
     color: #00f3ff;
@@ -277,12 +254,10 @@ Gian
     font-weight: bold;
 }
 
-
 .window-controls {
     display: flex;
     gap: 8px;
 }
-
 
 .dot {
     width: 25px;
@@ -297,16 +272,11 @@ Gian
     color: white;
 }
 
-
- 
-
-
 .window-body {
     padding: 20px;
     max-height: 420px;
     overflow-y: auto;
 }
-
 
 /* File List Styles inside Menu */
 .file-item {
@@ -321,19 +291,16 @@ Gian
     transition: all 0.2s ease;
 }
 
-
 .file-item:hover {
     background: rgba(0, 243, 255, 0.1);
     border-color: rgba(0, 243, 255, 0.3);
     transform: translateX(4px);
 }
 
-
 .file-icon {
     font-size: 1.3rem;
     margin-right: 12px;
 }
-
 
 .file-name {
     color: #ffffff;
@@ -341,7 +308,6 @@ Gian
     font-size: 0.9rem;
     font-weight: bold;
 }
-
 
 .back-btn {
     background: #1e293b;
@@ -355,11 +321,9 @@ Gian
     font-size: 0.8rem;
 }
 
-
 .back-btn:hover {
     background: rgba(0, 243, 255, 0.2);
 }
-
 
 /* --- Embedded Resume Styling --- */
 .resume-container {
@@ -369,19 +333,18 @@ Gian
     border-radius: 6px;
 }
 
-
 .resume-header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
     margin-bottom: 15px;
 }
-
 
 .resume-header h2 {
     color: #000000;
     font-size: 1.2rem;
     margin-bottom: 3px;
 }
-
 
 .resume-title {
     font-weight: 600;
@@ -390,12 +353,10 @@ Gian
     margin-bottom: 6px;
 }
 
-
 .resume-contact {
     font-size: 0.7rem;
     color: #475569;
 }
-
 
 .resume-divider {
     border: 0;
@@ -404,26 +365,21 @@ Gian
     margin: 12px 0;
 }
 
-
 .resume-grid {
     display: flex;
     gap: 15px;
     flex-direction: column;
 }
 
-
 @media(min-width: 550px) {
     .resume-grid { flex-direction: row; }
 }
 
-
 .resume-col { flex: 1; }
-
 
 .resume-section {
     margin-bottom: 10px;
 }
-
 
 .resume-section h3 {
     font-size: 20px;
@@ -434,27 +390,17 @@ Gian
     margin-bottom: 5px;
 }
 
-
 .resume-section p, .resume-section li {
     font-size: 0.75rem;
     color: #000000;
     line-height: 1.35;
 }
 
-
 .resume-section ul {
     padding-left: 15px;
 }
 
-
-.resume-header{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-
-.profile-pic{
+.profile-pic {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -462,59 +408,126 @@ Gian
     border: 3px solid #00e5ff;
 }
 
-
-.resume-info{
+.resume-info {
     flex: 1;
-
-}
-.resume-section img{
-    width:35px;
-    margin-right:10px;
-    transition:.3s;
 }
 
-.resume-section img:hover{
-    transform:scale(1.2);
-}
-.resume-section a{
-    font-size:18px;
-    font-weight:bold;
-    text-decoration:none;
+.resume-section img {
+    width: 35px;
+    margin-right: 10px;
+    transition: .3s;
 }
 
-.project-gallery{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    margin-top:15px;
+.resume-section img:hover {
+    transform: scale(1.2);
 }
 
-.project-gallery a{
-    text-decoration:none;
-    color:#000;
-    text-align:center;
+.resume-section a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.project-pic{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border-radius:10px;
-    border:2px solid #00f3ff;
-    transition:.3s;
+.project-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
 }
 
-.project-pic:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 15px #00f3ff;
+.project-gallery a {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
 }
 
-.contact-grid{
-    display:flex;
-    gap:40px;
-    justify-content:space-between;
+.project-pic {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #00f3ff;
+    transition: .3s;
 }
 
-.contact-column{
-    flex:1;
+.project-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f3ff;
+}
+
+/* --- FULL SCREEN SYSTEM WINDOW & SPACING ADJUSTMENTS --- */
+.explorer-window.full-screen-window {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    border-radius: 0 !important;
+    z-index: 9999 !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.explorer-window.full-screen-window .window-body {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 40px);
+    padding: 0px; 
+}
+
+/* Saktong-sakto at binagong laki ng text para sa Fullscreen Mode (Loob lang) */
+.resume-container.fullscreen-mode {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100vh !important;
+    box-sizing: border-box;
+    margin: 0 !important;
+    padding: 50px 70px !important; 
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Palakihin nang kaunti ang mga teksto para mas madaling basahin sa loob */
+.resume-container.fullscreen-mode h2 {
+    font-size: 2.2rem !important;
+    margin-bottom: 12px;
+}
+
+.resume-container.fullscreen-mode h3 {
+    font-size: 1.35rem !important;
+    margin-bottom: 8px;
+}
+
+.resume-container.fullscreen-mode p, 
+.resume-container.fullscreen-mode a, 
+.resume-container.fullscreen-mode li {
+    font-size: 1.1rem !important;
+    line-height: 1.6;
+}
+
+/* Tamang pag-aayos ng Contact Grid para hindi magpatong-patong */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Responsive media query para sa mobile o mas maliit na screen */
+@media (max-width: 768px) {
+    .resume-container.fullscreen-mode {
+        padding: 25px !important;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
